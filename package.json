@@ -1,0 +1,26 @@
+{
+  "name": "grpc_ssl",
+  "version": "1.0.0",
+  "description": "grpc server and client with ssl certificates",
+  "main": "index.js",
+  "scripts": {
+    "grpc-types": "proto-loader-gen-types --keepCase=true --longs=String --enums=String --defaults --oneofs --grpcLib=@grpc/grpc-js --outDir=./src/infrastructure/api/types ./src/infrastructure/api/proto/helloworld.proto",
+    "start:dev": "ts-node-dev --respawn --poll ./src/index.ts",
+    "start:prod": "ts-node ./src/index.ts"
+  },
+  "author": "Ítalo de Souza",
+  "license": "ISC",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.8.14",
+    "@grpc/proto-loader": "^0.7.6",
+    "async": "^1.5.2",
+    "google-protobuf": "^3.0.0",
+    "lodash": "^4.6.1",
+    "minimist": "^1.2.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  },
+  "devDependencies": {
+    "ts-node-dev": "^2.0.0"
+  }
+}
